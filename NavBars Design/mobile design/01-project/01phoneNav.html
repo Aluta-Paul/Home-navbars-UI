@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Nave bar: App like mobile</title>
+  <link rel="stylesheet" href="01phoneNav.css">
+<!--Either IONICONS or FONTAWSOME-->
+
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">Logo </h1>
+      <ul class="desktop-list">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a class="ctn" href="">Contact Us</a></li>
+      </ul>
+      <ul class="mobile-list"> <!--To make it responsive-->
+        <li><ion-icon name="home-outline"></ion-icon></li>
+        <li><ion-icon name="cog-outline"></ion-icon></li>
+        <li><ion-icon name="call-outline"></ion-icon></li>
+        <li><ion-icon name="person-outline"></ion-icon></li>
+        <li><ion-icon name="menu-outline"></ion-icon></li>
+      </ul>
+  </nav>
+
+  <!--IONICONS-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

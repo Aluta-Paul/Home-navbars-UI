@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  background-image: url(laptop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+nav a:hover{
+  background-color: #f0f0f0;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+
+/*+++++Making it responsive ++++++++*/
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999; /*To ensure its ontop of everything*/
+  background-color: rgba(255, 255, 255,0.2);
+  backdrop-filter: blur(10px); /*This determine how element behind current element is rendered by browser*/
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  display: none;/*flex*/
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+/*Was incl to help hide it in large devices*/
+.menu-button{
+  display: none;
+}
+
+.sidebar a{
+  width: 100%;
+}
+/*======TO HIDE THE HIDE NAV BAR*/
+@media(max-width: 800px){
+  .hideOnMobile{
+    /*Every element with this class will not be visible on devices of screen smaller than 800px*/
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+
+  /*For smartphones the sidebar to cover entire phone*/
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+
+  /*For bigger screens we hide the SVG-Menue icons*/
